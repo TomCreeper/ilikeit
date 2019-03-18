@@ -60,7 +60,7 @@ function likeFirstMessage(url) {
         this.click('.post_like._like_wrap:not(.my_like)');
     }, function () {
         this.echo('no like button found');
-        //this.capture('noLike.png')
+        this.capture('noLike.png')
     });
     cs.wait(_.random(1000, 5000), function () {
         this.echo('done:' + url)
@@ -76,7 +76,7 @@ function repostFirstMessage(url) {
         });
     }, function () {
         this.echo('no repost button found');
-        //this.capture('noLike.png')
+        this.capture('noLike.png')
     });
     cs.wait(_.random(1000, 5000), function () {
         this.echo('done repost:' + url)
@@ -107,17 +107,17 @@ function doLogout() {
     cs.waitForSelector('#top_profile_link', function () {
         this.click('#top_profile_link')
     }, function () {
-        //this.capture('1.png')
+        this.capture('1.png')
     });
     cs.waitForSelector('#top_logout_link', function () {
         this.click('#top_logout_link')
     }, function () {
-        //this.capture('1.png')
+        this.capture('1.png')
     });
     cs.waitForSelector('#quick_login', function () {
         this.echo('logout success');
     }, function () {
-        //this.capture('1.png')
+        this.capture('1.png')
     });
 }
 
